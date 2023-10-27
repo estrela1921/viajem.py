@@ -20,6 +20,7 @@ class PesquisaViagem:
     def realizar_pesquisa(self):
         with open(self.arquivo_csv, mode='w', newline='') as file:
             writer = csv.writer(file)
+            file.write("sep=,\n")
             writer.writerow(["Idade", "Gênero"] + [f"Resposta_{i+1}" for i in range(len(self.perguntas))] + ["Data", "Hora"])
 
             while True:
