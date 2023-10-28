@@ -18,11 +18,10 @@ Exibição dos Dados da Pesquisa
 Exemplo de uso:
 *Coleta de Dados para Estudos de Mercado: As empresas podem usar este projeto para coletar dados sobre as preferências de viagem dos consumidores. 
 Isso pode ajudá-los a entender melhor o público-alvo e adaptar suas ofertas de produtos e serviços.
-*Avaliação de Destinos Turísticos: Agências de turismo podem usar a pesquisa para avaliar a preferência dos viajantes por destinos específicos,
-como praias ou cachoeiras. Isso pode ajudar na criação de pacotes de viagem personalizados.
+*Avaliação de Destinos Turísticos: Agências de turismo podem usar a pesquisa para avaliar a preferência dos viajantes por destinos específicos. Isso pode ajudar na criação de pacotes de viagem personalizados.
 Funcionalidades do Projeto:
 *Coleta de Dados Demográficos: O projeto coleta informações demográficas, como idade e gênero dos participantes.
-*Coleta de Preferências de Viagem: Os participantes respondem a uma série de perguntas sobre suas preferências de viagem, incluindo se gostam de viajar, se preferem lugares com praia ou cachoeira, etc.
+*Coleta de Preferências de Viagem: Os participantes respondem a uma série de perguntas sobre suas preferências de viagem.
 *Armazenamento em Arquivo CSV: Os dados armazenados são armazenados em um arquivo CSV para posterior análise.
 *Exibição dos Dados: O projeto permite que os dados sejam fornecidos na saída padrão para análise imediata.
 *Personalização das perguntas: As perguntas da pesquisa podem ser facilmente personalizadas para se adequarem a diferentes tipos de estudos.
