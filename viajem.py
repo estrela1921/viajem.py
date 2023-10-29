@@ -24,12 +24,19 @@ class PesquisaViagem:
             writer.writerow(["Idade", "Gênero"] + [f"Resposta_{i+1}" for i in range(len(self.perguntas))] + ["Data", "Hora"])
 
             while True:
-                print("\nBem-vindo à nossa Pesquisa sobre viagem Pra começarmos Digite:\n(1)Feminino\n(2)Masculino\n(3)Não sei \n Logo em seguida digite:\n(1)Sim\n(2)Não\n(3)Não sei\n ")
-                idade = input("\nPara começarmos, informe sua idade (ou digite '00' para encerrar): ")
+                print("\nBem-vindo à nossa Pesquisa sobre viagem. Para começarmos, por favor, informe seu gênero:")
+                print("(1) Feminino\n(2) Masculino\n(3) Não sei")
+                genero = input("Opção: ")
+                if genero in ["1", "2", "3"]:
+                    break
+                else:
+                    print("Resposta Inválida. Digite uma opção válida (1, 2 ou 3)")
+
+            while True:
+                idade = input("\nInforme sua idade (ou digite '00' para encerrar): ")
                 if idade == '00':
                     break
 
-                genero = input("\nInforme seu gênero: ")
                 respostas = []
 
                 for pergunta in self.perguntas:
@@ -62,7 +69,6 @@ class PesquisaViagem:
                 hora = row[-1]  # Índice da coluna de hora
                 print("\nData:", data)
                 print("Hora:", hora)
-                #print("\n")
 
 if __name__ == "__main__":
     arquivo_csv = "dados_pesquisa.csv"
