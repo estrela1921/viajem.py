@@ -4,12 +4,12 @@ from datetime import datetime
 class Perguntas:
     def __init__(self):
         self.perguntas = [
-            "\n1. Você gosta de viajar? (1 - Sim, 2 - Não, 3 - Não sei responder)",
-            "\n2. Você já viajou para outro país? (1 - Sim, 2 - Não, 3 - Não sei responder)",
-            "\n3. Você costuma viajar em família? (1 - Sim, 2 - Não, 3 - Não sei responder)",
-            "\n4. Você se planeja para fazer uma viagem? (1 - Sim, 2 - Não, 3 - Não sei responder)",
-            "\n5. Quando você viaja você gosta de lugares com praia? (1 - Sim, 2 - Não, 3 - Não sei responder)",
-            "\n6. Você gosta de viajar para lugares com cachoeira? (1 - Sim, 2 - Não, 3 - Não sei responder)"
+            "\n1. Você gosta de viajar? \n(1) Sim \n(2) Não \n(3) Não sei responder \n DIGITE: ",
+            "\n2. Você já viajou para outro país? \n(1) Sim \n(2) Não \n(3) Não sei responder \n DIGITE: ",
+            "\n3. Você costuma viajar em família? \n(1) Sim \n(2) Não \n(3) Não sei responder \n DIGITE: ",
+            "\n4. Você se planeja para fazer uma viagem? \n(1) Sim \n(2) Não \n(3) Não sei responder \n DIGITE: ",
+            "\n5. Quando você viaja você gosta de lugares com praia? \n(1) Sim \n(2) Não \n(3) Não sei responder \n DIGITE:  ",
+            "\n6. Você gosta de viajar para lugares com cachoeira? \n(1) Sim \n(2) Não \n(3) Não sei responder \n DIGITE: "
         ]
 
 class PesquisaViagem:
@@ -31,7 +31,7 @@ class PesquisaViagem:
                     break
 
                 while True:
-                    genero = input("\nInforme seu gênero \n(1) Feminino\n(2) Masculino\n(3) Não sei" )
+                    genero = input("(1) Feminino\n(2) Masculino\n(3) Não sei\n Informe seu gênero: " )
                     if genero in ["1", "2", "3"]:
                         break
                     else:
