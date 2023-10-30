@@ -9,7 +9,7 @@ class Perguntas:
             "\n3. Você costuma viajar em família? (1 - Sim, 2 - Não, 3 - Não sei responder)",
             "\n4. Você se planeja para fazer uma viagem? (1 - Sim, 2 - Não, 3 - Não sei responder)",
             "\n5. Quando você viaja você gosta de lugares com praia? (1 - Sim, 2 - Não, 3 - Não sei responder)",
-            "\n6. Você gosta de viajar para lugares com cachoeira? ( 1 - Sim, 2 - Não, 3 - Não sei responder)"
+            "\n6. Você gosta de viajar para lugares com cachoeira? (1 - Sim, 2 - Não, 3 - Não sei responder)"
         ]
 
 class PesquisaViagem:
@@ -18,37 +18,40 @@ class PesquisaViagem:
         self.perguntas = Perguntas().perguntas
 
     def realizar_pesquisa(self):
-        while True:
-            print("\nBem-vindo à nossa Pesquisa sobre viagem. Para começarmos, por favor, informe seu gênero:")
-            print("(1) Feminino\n(2) Masculino\n(3) Não sei")
-            genero = input("Opção: ")
-            if genero in ["1", "2", "3"]:
-                break
-            else:
-                print("Resposta Inválida. Digite uma opção válida (1, 2 ou 3)")
+        with open(self.arquivo_csv, mode='a', newline='') as file:  # Abre o arquivo em modo de anexação ('a')
+            writer = csv.writer(file)
+            # Se o arquivo estiver vazio, escreve o cabeçalho
+            if file.tell() == 0:
+                writer.writerow(["Idade", "Gênero"] + [f"Resposta_{i+1}" for i in range(len(self.perguntas))] + ["Data", "Hora"])
 
-        while True:
-            idade = input("\nInforme sua idade (ou digite '00' para encerrar): ")
-            if idade == '00':
-                break
+            while True:
+                print("\nBem-vindo à nossa Pesquisa sobre viagem")
+                idade = input("\nPara começarmos, informe sua idade (ou digite '00' para encerrar): ")
+                if idade == '00':
+                    break
 
-            respostas = []
-
-            for pergunta in self.perguntas:
                 while True:
-                    resposta = input(pergunta)
-                    if resposta in ["1", "2", "3"]:
+                    genero = input("\nInforme seu gênero \n(1) Feminino\n(2) Masculino\n(3) Não sei" )
+                    if genero in ["1", "2", "3"]:
                         break
                     else:
-                        print("Resposta Inválida. Digite uma opção válida (1, 2 ou 3)")
+                        print("Gênero inválido. Digite uma opção válida (1, 2 ou 3)")
 
-                data_hora = datetime.now()
-                data = data_hora.strftime("%d-%m-%Y")
-                hora = data_hora.strftime("%H:%M:%S")
-                respostas.append(resposta)
+                respostas = []
 
-            with open(self.arquivo_csv, mode='a', newline='') as file:
-                writer = csv.writer(file)
+                for pergunta in self.perguntas:
+                    while True:
+                        resposta = input(pergunta)
+                        if resposta in ["1", "2", "3"]:
+                            break
+                        else:
+                            print("Resposta Inválida. Digite uma opção válida (1, 2 ou 3)")
+
+                    data_hora = datetime.now()
+                    data = data_hora.strftime("%d-%m-%Y")
+                    hora = data_hora.strftime("%H:%M:%S")
+                    respostas.append(resposta)
+
                 writer.writerow([idade, genero] + respostas + [data, hora])
 
     def exibir_dados_pesquisa(self):
