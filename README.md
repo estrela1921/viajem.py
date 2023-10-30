@@ -3,7 +3,7 @@
 # viajem.py
 Trabalho em grupo do modulo 2
 Componentes:
-*HUDSON CEZAR DOS SANTOS GUEDES (Pessoa Co_facilitadora) 
+*HUDSON CESAR DOS SANTOS GUEDES (Pessoa Co_facilitadora) 
 *ILMA GONÇALVES DA ROCHA OLIVEIRA (Pessoa Gestora de Conhecimento)
 *STEPHANE DO NASCIMENTO MARTINIANO (Pessoa Gestora de Gente e Engajamento)
 *ARTHUR DE OLIVEIRA MACHADO (Pessoa Colaboradora 1)
