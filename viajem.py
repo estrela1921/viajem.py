@@ -25,7 +25,7 @@ class PesquisaViagem:
                 writer.writerow(["Idade", "Gênero"] + [f"Resposta_{i+1}" for i in range(len(self.perguntas))] + ["Data", "Hora"])
 
             while True:
-                print("\nBem-vindo à nossa Pesquisa sobre viagem")
+                print("\nBem-vindo à nossa Pesquisa sobre viagemra começarmos Digite: \n(1)Feminino\n(2)Masculino\n(3)Não sei\n Logo em seguida digite:\n(1)Sim\n(2)Não\n(3)Não sei\n Responda com Honestidade")
                 idade = input("\nPara começarmos, informe sua idade (ou digite '00' para encerrar): ")
                 if idade == '00':
                     break
