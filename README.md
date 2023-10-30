@@ -2,6 +2,8 @@
 
 # viajem.py
 Trabalho em grupo do modulo 2
+Intituição de ensino:Senac/Resilia
+Docente: Simone
 Componentes:
 *HUDSON CESAR DOS SANTOS GUEDES (Pessoa Co_facilitadora) 
 *ILMA GONÇALVES DA ROCHA OLIVEIRA (Pessoa Gestora de Conhecimento)
